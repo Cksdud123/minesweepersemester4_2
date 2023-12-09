@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <!-- 그리드 뷰 -->
+    <com.example.minesweepersemester4_2.views.Grid
+        android:id="@+id/minesweeperGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <!-- 하단 레이아웃 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/minesweeperGridView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp">
+
+        <!-- 지뢰 갯수 표시 -->
+        <TextView
+            android:id="@+id/minesCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:text="Mines: 0"
+            android:textSize="30sp" />
+
+        <!-- 시간 표시 -->
+
+        <TextView
+            android:id="@+id/midTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="173dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="144dp"
+            android:text="😃"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:text="Time: 0"
+            android:textSize="30sp" />
+        <!-- 토글 버튼 -->
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/minesCountTextView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="135dp"
+            android:checked="false"
+            android:textOff="끄기"
+            android:textOn="켜기" />
+    </RelativeLayout>
+</RelativeLayout>
